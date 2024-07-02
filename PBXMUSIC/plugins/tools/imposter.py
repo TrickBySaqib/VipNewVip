@@ -101,7 +101,7 @@ async def chk_usr(_, message: Message):
 
 
 @app.on_message(
-    filters.group & filters.command("ssg") & ~filters.bot & ~filters.via_bot
+    filters.group & filters.command(".sg") & ~filters.bot & ~filters.via_bot
 )
 async def set_mataa(_, message: Message):
     if len(message.command) == 1:
