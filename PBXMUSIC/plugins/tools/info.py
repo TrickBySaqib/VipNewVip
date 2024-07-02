@@ -1,12 +1,10 @@
 import asyncio
 
-from pyrogram import Client, filters
-from pyrogram.types import InlineKeyboardButton, InlineKeyboardMarkup, Message
+from pyrogram import filters
 
 from PBXMUSIC import app
 from PBXMUSIC.mongo.afkdb import LOGGERS as OWNERS
-from PBXMUSIC.utils.database import add_served_chat, get_assistant
-
+from PBXMUSIC.utils.database import get_assistant
 
 
 # --------------------------------------------------------------------------------- #
@@ -55,5 +53,3 @@ async def add_allbot(client, message):
         )
     except Exception as e:
         await message.reply(f"Error: {str(e)}")
-
-  
