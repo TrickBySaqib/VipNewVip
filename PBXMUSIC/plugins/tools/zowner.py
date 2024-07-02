@@ -2,8 +2,7 @@ from pyrogram import Client, filters
 from PBXMUSIC import app
 from PBXMUSIC.utils.database import add_served_chat
 from pyrogram.types import Message, InlineKeyboardMarkup, InlineKeyboardButton
-from PBXMUSIC.mongo.afkdb import LOGGERS as OWNERS
-from PBXMUSIC.utils.database import add_served_chat, get_assistant
+from PBXMUSIC.utils.database import add_served_chat
 
 app.on_message(filters.command("repo") & filters.group)
 
