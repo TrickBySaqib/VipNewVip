@@ -9,7 +9,7 @@ from ..logging import LOGGER
 class PBX(Client):
     def __init__(self):
         LOGGER(__name__).info(f"Starting Bot...")
-        PBX().__init__(
+        super().__init__(
             name="PBXMUSIC",
             api_id=config.API_ID,
             api_hash=config.API_HASH,
