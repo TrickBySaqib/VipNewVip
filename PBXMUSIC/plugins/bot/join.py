@@ -4,8 +4,8 @@ from pyrogram.errors import ChatAdminRequired, UserNotParticipant, ChatWriteForb
 from PBXMUSIC import app
 
 
-
 X = "PUNJABI_CHATTING_HUB"
+
 
 @app.on_message(filters.incoming & filters.private, group=-1)
 async def _channel(app: Client, msg: Message):
@@ -22,17 +22,18 @@ async def _channel(app: Client, msg: Message):
                 link = chat_info.invite_link
             try:
                 await msg.reply_photo(
-                    photo="url", caption=f"hello",
+                    photo="url",
+                    caption=f"hello",
                     reply_markup=InlineKeyboardMarkup(
                         [
-                                    [
-            InlineKeyboardButton(
-                text="ᴄʟɪᴄᴋ",
-                url="https://t.me/THE_PUNJABI_BANDE",
-            ),
-        ],  
-]
-                    )
+                            [
+                                InlineKeyboardButton(
+                                    text="ᴄʟɪᴄᴋ",
+                                    url="https://t.me/THE_PUNJABI_BANDE",
+                                ),
+                            ],
+                        ]
+                    ),
                 )
                 await msg.stop_propagation()
             except ChatWriteForbidden:
